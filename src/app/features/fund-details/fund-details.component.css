@@ -1,0 +1,31 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  background-color: gray;
+  color: black;
+  font-family: Tahoma, sans-serif;
+  font-size: 8pt;
+  font-weight: 500; /* medium weight */
+}
+
+th {
+  width: 33%; /* Fixed width for each column */
+}
+
+td {
+  width: 33%; /* Fixed width for each column */
+}
+
+/* Make fields non-editable */
+td {
+  pointer-events: none;
+}

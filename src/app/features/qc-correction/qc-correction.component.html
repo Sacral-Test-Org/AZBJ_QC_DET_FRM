@@ -1,0 +1,50 @@
+<div class="qc-correction">
+  <h1>QC Correction</h1>
+  <div class="qc-section" *ngFor="let record of records; let i = index" [ngClass]="{'highlight': i === selectedIndex}">
+    <div class="form-group">
+      <label for="flg">FLG:</label>
+      <input type="number" id="flg" [(ngModel)]="record.FLG" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="desc">DESC:</label>
+      <input type="text" id="desc" [(ngModel)]="record.DESC" class="form-control" readonly maxlength="200" />
+    </div>
+    <div class="form-group">
+      <label for="opusval">OPUSVAL:</label>
+      <input type="text" id="opusval" [(ngModel)]="record.OPUSVAL" class="form-control" readonly maxlength="5000" />
+    </div>
+    <div class="form-group">
+      <label for="ci">CI:</label>
+      <div>
+        <input type="radio" id="ciN" name="ci{{i}}" [(ngModel)]="record.CI" value="N" (change)="onRadioChange(record)" /> N
+        <input type="radio" id="ciY" name="ci{{i}}" [(ngModel)]="record.CI" value="Y" (change)="onRadioChange(record)" /> Y
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="scan_date">SCAN_DATE:</label>
+      <input type="date" id="scan_date" [(ngModel)]="record.SCAN_DATE" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="ins_dt">INS_DT:</label>
+      <input type="date" id="ins_dt" [(ngModel)]="record.INS_DT" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="flg1">FLG1:</label>
+      <input type="number" id="flg1" [(ngModel)]="record.FLG1" class="form-control" />
+    </div>
+    <input type="hidden" [(ngModel)]="record.MIS_USER" maxlength="50" />
+  </div>
+  <div class="navigation-buttons">
+    <button (click)="navigateToFirstRecord()">First Record</button>
+    <button (click)="navigateToPreviousRecord()">Previous Record</button>
+    <button (click)="navigateToNextRecord()">Next Record</button>
+    <button (click)="navigateToLastRecord()">Last Record</button>
+  </div>
+  <div class="comments-section">
+    <h2>Comments</h2>
+    <div *ngIf="comments.length === 0" class="alert alert-warning">No comments found for the given policy number.</div>
+    <div *ngFor="let comment of comments">
+      <p>{{comment.user_id}} ({{comment.co_date}}): {{comment.uw_comments}}</p>
+    </div>
+  </div>
+</div>

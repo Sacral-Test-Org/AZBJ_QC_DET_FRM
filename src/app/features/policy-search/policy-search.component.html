@@ -1,0 +1,38 @@
+<div class="policy-search-container">
+  <h2>Policy Search and Validation</h2>
+  <form (ngSubmit)="onSearch()">
+    <div class="form-group">
+      <label for="policyRefNumber">Policy Reference Number:</label>
+      <input type="text" id="policyRefNumber" name="policyRefNumber" [(ngModel)]="policyRefNumber" required />
+    </div>
+    <button type="submit">Search</button>
+  </form>
+
+  <div *ngIf="policyDetails">
+    <h3>Policy Details</h3>
+    <p><strong>Date of Proposal:</strong> {{ policyDetails.dateOfProposal }}</p>
+    <p><strong>Policy Status:</strong> {{ policyDetails.policyStatus }}</p>
+    <p><strong>Place of Death:</strong> {{ policyDetails.placeOfDeath }}</p>
+    <p><strong>Cause of Death:</strong> {{ policyDetails.causeOfDeath }}</p>
+    <p><strong>Date of Information:</strong> {{ policyDetails.dateOfInformation }}</p>
+    <p><strong>Docket Received On:</strong> {{ policyDetails.docketReceivedOn }}</p>
+    <p><strong>All Required Received On:</strong> {{ policyDetails.allRequiredReceivedOn }}</p>
+    <p><strong>Ensured To:</strong> {{ policyDetails.ensuredTo }}</p>
+    <p><strong>Verified By:</strong> {{ policyDetails.verifiedBy }}</p>
+    <p><strong>Followed By:</strong> {{ policyDetails.followedBy }}</p>
+    <p><strong>Death Claim Start Date:</strong> {{ policyDetails.deathClaimStartDate }}</p>
+    <p><strong>Assignment:</strong> {{ policyDetails.assignment }}</p>
+    <p><strong>Reserves:</strong> {{ policyDetails.reserves }}</p>
+    <p><strong>Sum at Risk:</strong> {{ policyDetails.sumAtRisk }}</p>
+    <p><strong>Revised Sum Assured:</strong> {{ policyDetails.revisedSumAssured }}</p>
+
+    <div *ngIf="policyDetails.qcPassed">
+      <h4>Quality Check Passed</h4>
+      <!-- Additional fields for further actions can be added here -->
+    </div>
+  </div>
+
+  <div *ngIf="errorMessage">
+    <p class="error">{{ errorMessage }}</p>
+  </div>
+</div>

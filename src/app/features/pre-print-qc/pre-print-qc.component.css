@@ -1,0 +1,52 @@
+/* Styles for the Pre-Print QC Component */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.value {
+  flex: 1;
+  text-align: left;
+}
+
+.read-only {
+  color: #555;
+}
+
+/* Ensure the information is clearly organized and labeled */
+.field:nth-child(even) {
+  background-color: #e9e9e9;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .field {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .label {
+    margin-bottom: 5px;
+  }
+}

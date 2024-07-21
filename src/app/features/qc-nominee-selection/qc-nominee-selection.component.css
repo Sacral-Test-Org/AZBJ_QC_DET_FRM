@@ -1,0 +1,19 @@
+/* Styles for the QC Nominee Selection radio group */
+
+.radio-group {
+  position: absolute;
+  top: 134px;
+  left: 339px;
+  width: 68px;
+  height: 14px;
+  background-color: gray;
+  color: black;
+}
+
+.radio-group input[type="radio"] {
+  margin-right: 5px;
+}
+
+.radio-group label {
+  margin-right: 10px;
+}

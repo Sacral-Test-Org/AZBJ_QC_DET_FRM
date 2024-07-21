@@ -1,0 +1,90 @@
+/* Styles for the nominee update component */
+
+/* Container for the form */
+.nominee-update-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Form fields */
+.nominee-update-form {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.nominee-update-form .form-group {
+  margin-bottom: 15px;
+}
+
+.nominee-update-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.nominee-update-form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Buttons */
+.nominee-update-form .form-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nominee-update-form button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.nominee-update-form .btn-update {
+  background-color: #28a745;
+  color: white;
+}
+
+.nominee-update-form .btn-cancel {
+  background-color: #dc3545;
+  color: white;
+}
+
+.nominee-update-form .btn-update:hover {
+  background-color: #218838;
+}
+
+.nominee-update-form .btn-cancel:hover {
+  background-color: #c82333;
+}
+
+/* Error and success messages */
+.message {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.message.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}

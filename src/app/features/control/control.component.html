@@ -1,0 +1,49 @@
+<div class="control-block">
+  <!-- Checkbox for QC Section Navigation and Record Update -->
+  <input type="checkbox" (change)="onCheckboxChange($event)">
+
+  <!-- Dropdown for Reason Of Skip -->
+  <label for="reasonOfSkip">Reason Of Skip</label>
+  <select id="reasonOfSkip" (change)="onReasonOfSkipChange($event)">
+    <option *ngFor="let reason of skipReasons" [value]="reason">{{ reason }}</option>
+  </select>
+
+  <!-- Exit Button -->
+  <button id="exitButton" (click)="onExitButtonClick()">Exit</button>
+
+  <!-- Search Button -->
+  <button id="searchButton" (click)="onSearchButtonClick()">Search</button>
+
+  <!-- Reset Button -->
+  <button id="resetButton" (click)="onResetButtonClick()">Reset</button>
+
+  <!-- Enrich Proposal Button -->
+  <button id="enrichProposalButton" (click)="enrichProposal()">Enrich Proposal</button>
+
+  <!-- View Images Button -->
+  <button id="viewImagesButton" (click)="onViewImagesButtonClick()">View Images</button>
+
+  <!-- View Document Button -->
+  <button id="viewDocumentButton" (click)="onViewDocumentClick()">View Document</button>
+
+  <!-- Input field for policy reference number -->
+  <input type="text" id="policyRef" [(ngModel)]="policyRef" placeholder="Enter Policy Reference">
+
+  <!-- Alert box to display messages -->
+  <div *ngIf="alertMessage" class="alert-box">
+    {{ alertMessage }}
+  </div>
+
+  <!-- Fields to display beneficiary details, application number, and appointee gender -->
+  <div *ngIf="beneficiaryDetails">
+    <p>Beneficiary DOB: {{ beneficiaryDetails.dob }}</p>
+    <p>Beneficiary Name: {{ beneficiaryDetails.name }}</p>
+    <p>Beneficiary Relation: {{ beneficiaryDetails.relation }}</p>
+  </div>
+  <div *ngIf="applicationNumber">
+    <p>Application Number: {{ applicationNumber }}</p>
+  </div>
+  <div *ngIf="appointeeGender">
+    <p>Appointee Gender: {{ appointeeGender }}</p>
+  </div>
+</div>

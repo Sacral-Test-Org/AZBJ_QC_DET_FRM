@@ -1,0 +1,83 @@
+<div class="dispatch-details-container">
+  <form (ngSubmit)="saveDispatchDetails()">
+    <div class="form-group">
+      <label for="shipNo">Shipment Number</label>
+      <input type="text" id="shipNo" [(ngModel)]="dispatchDetails.SHIP_NO" name="shipNo" required />
+    </div>
+    <div class="form-group">
+      <label for="awbNo">Airway Bill Number</label>
+      <input type="text" id="awbNo" [(ngModel)]="dispatchDetails.AWB_NO" name="awbNo" required />
+    </div>
+    <div class="form-group">
+      <label for="delType">Delivery Type</label>
+      <select id="delType" [(ngModel)]="dispatchDetails.DEL_TYPE" name="delType">
+        <option value="I">I</option>
+        <option value="O">O</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="vendor">Vendor</label>
+      <input type="text" id="vendor" [(ngModel)]="dispatchDetails.VENDOR" name="vendor" required />
+    </div>
+    <div class="form-group">
+      <label for="desType">Destination Type</label>
+      <select id="desType" [(ngModel)]="dispatchDetails.DES_TYPE" name="desType">
+        <option value="CUST">CUST</option>
+        <option value="WH">WH</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="pickReqNo">Pickup Request Number</label>
+      <input type="text" id="pickReqNo" [(ngModel)]="dispatchDetails.PICK_REQ_NO" name="pickReqNo" required />
+    </div>
+    <div class="form-group">
+      <label for="prRef">Pickup Request Reference</label>
+      <input type="text" id="prRef" [(ngModel)]="dispatchDetails.PR_REF" name="prRef" readonly />
+    </div>
+    <div class="form-group">
+      <label for="consigneeName">Consignee Name</label>
+      <input type="text" id="consigneeName" [(ngModel)]="dispatchDetails.CONSIGNEE_NAME" name="consigneeName" readonly />
+    </div>
+    <div class="form-group">
+      <label for="conAdd1">Consignee Address Line 1</label>
+      <input type="text" id="conAdd1" [(ngModel)]="dispatchDetails.CON_ADD1" name="conAdd1" readonly />
+    </div>
+    <div class="form-group">
+      <label for="conAdd2">Consignee Address Line 2</label>
+      <input type="text" id="conAdd2" [(ngModel)]="dispatchDetails.CON_ADD2" name="conAdd2" readonly />
+    </div>
+    <div class="form-group">
+      <label for="conAdd3">Consignee Address Line 3</label>
+      <input type="text" id="conAdd3" [(ngModel)]="dispatchDetails.CON_ADD3" name="conAdd3" readonly />
+    </div>
+    <div class="form-group">
+      <label for="conCity">Consignee City</label>
+      <input type="text" id="conCity" [(ngModel)]="dispatchDetails.CON_CITY" name="conCity" readonly />
+    </div>
+    <div class="form-group">
+      <label for="conState">Consignee State</label>
+      <input type="text" id="conState" [(ngModel)]="dispatchDetails.CON_STATE" name="conState" readonly />
+    </div>
+    <div class="form-group">
+      <label for="desPin">Destination PIN</label>
+      <input type="text" id="desPin" [(ngModel)]="dispatchDetails.DES_PIN" name="desPin" readonly />
+    </div>
+    <div class="form-group">
+      <label for="wt">Weight</label>
+      <input type="text" id="wt" [(ngModel)]="dispatchDetails.WT" name="wt" required />
+    </div>
+    <div class="form-group">
+      <label for="gm">Weight Unit</label>
+      <select id="gm" [(ngModel)]="dispatchDetails.GM" name="gm">
+        <option value="Grm">Grm</option>
+        <option value="Kg">Kg</option>
+        <option value="Lb">Lb</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="venCode">Vendor Code</label>
+      <input type="text" id="venCode" [(ngModel)]="dispatchDetails.VEN_CODE" name="venCode" readonly />
+    </div>
+    <button type="submit">Save</button>
+  </form>
+</div>

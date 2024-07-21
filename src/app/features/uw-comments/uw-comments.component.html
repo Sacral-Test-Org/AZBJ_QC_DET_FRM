@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="header">
+    <h1>Underwriting Comments</h1>
+    <div class="current-date">{{ currentDate | date: 'fullDate' }}</div>
+  </div>
+
+  <div class="policy-search">
+    <label for="policyNumber">Policy Number:</label>
+    <input type="text" id="policyNumber" [(ngModel)]="policyNumber" placeholder="Enter Policy Number" />
+    <button (click)="fetchComments()">UW Comments</button>
+  </div>
+
+  <div *ngIf="showAlert" class="alert alert-warning">
+    No UW comments found for the policy number.
+    <button (click)="redirectToQC()">OK</button>
+  </div>
+
+  <div *ngIf="comments.length > 0" class="comments-section">
+    <div *ngIf="showUserIdField" class="user-id">
+      <label for="userId">User ID:</label>
+      <input type="text" id="userId" [(ngModel)]="userId" />
+    </div>
+
+    <div class="comments-list">
+      <div *ngFor="let comment of comments" class="comment">
+        <div class="comment-header">
+          <span class="comment-user">{{ comment.userId }}</span>
+          <span class="comment-date">{{ comment.coDate | date: 'short' }}</span>
+        </div>
+        <div class="comment-body">
+          {{ comment.uwComments }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

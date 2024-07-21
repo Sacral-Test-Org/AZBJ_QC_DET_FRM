@@ -1,0 +1,61 @@
+<div class="fund-management-container">
+  <h2>Manage Fund Information</h2>
+  <form (ngSubmit)="onSubmit()" #fundForm="ngForm">
+    <div class="form-group">
+      <label for="fundId">Fund ID</label>
+      <input 
+        type="text" 
+        id="fundId" 
+        name="fundId" 
+        class="form-control" 
+        [(ngModel)]="fund.fundId" 
+        #fundId="ngModel" 
+        required 
+        maxlength="100"
+        placeholder="Enter Fund ID">
+      <div *ngIf="fundId.invalid && (fundId.dirty || fundId.touched)" class="alert alert-danger">
+        <div *ngIf="fundId.errors?.required">Fund ID is required.</div>
+        <div *ngIf="fundId.errors?.maxlength">Fund ID cannot be more than 100 characters.</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="fundDescription">Fund Description</label>
+      <input 
+        type="text" 
+        id="fundDescription" 
+        name="fundDescription" 
+        class="form-control" 
+        [(ngModel)]="fund.fundDescription" 
+        #fundDescription="ngModel" 
+        required 
+        maxlength="100"
+        placeholder="Enter Fund Description">
+      <div *ngIf="fundDescription.invalid && (fundDescription.dirty || fundDescription.touched)" class="alert alert-danger">
+        <div *ngIf="fundDescription.errors?.required">Fund Description is required.</div>
+        <div *ngIf="fundDescription.errors?.maxlength">Fund Description cannot be more than 100 characters.</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="prApportionment">PR Apportionment</label>
+      <input 
+        type="text" 
+        id="prApportionment" 
+        name="prApportionment" 
+        class="form-control" 
+        [(ngModel)]="fund.prApportionment" 
+        #prApportionment="ngModel" 
+        required 
+        maxlength="100"
+        placeholder="Enter PR Apportionment">
+      <div *ngIf="prApportionment.invalid && (prApportionment.dirty || prApportionment.touched)" class="alert alert-danger">
+        <div *ngIf="prApportionment.errors?.required">PR Apportionment is required.</div>
+        <div *ngIf="prApportionment.errors?.maxlength">PR Apportionment cannot be more than 100 characters.</div>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="fundForm.invalid">Insert Fund</button>
+    <button type="button" class="btn btn-secondary" (click)="onUpdate()" [disabled]="fundForm.invalid">Update Fund</button>
+  </form>
+</div>

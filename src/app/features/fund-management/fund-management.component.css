@@ -1,0 +1,48 @@
+/* Styles for the fund management component */
+
+/* Consistent font size, font style, and colors with the rest of the application */
+
+:host {
+  display: block;
+  padding: 16px;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* Styles for input fields */
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Styles for labels */
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Styles for buttons */
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #45a049;
+}

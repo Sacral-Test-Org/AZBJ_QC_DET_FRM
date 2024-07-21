@@ -1,0 +1,38 @@
+<div class="pre-print-qc-container">
+  <h2>Pre-Print QC Information</h2>
+  <div class="qc-info">
+    <label>User ID:</label>
+    <span>{{ prePrintQC.userId }}</span>
+  </div>
+  <div class="qc-info">
+    <label>Address:</label>
+    <span>{{ prePrintQC.address }}</span>
+  </div>
+  <div class="qc-info">
+    <label>Telephone Number:</label>
+    <span>{{ prePrintQC.telephoneNumber }}</span>
+  </div>
+  <div class="qc-info">
+    <label>Mobile Number:</label>
+    <span>{{ prePrintQC.mobileNumber }}</span>
+  </div>
+  <div class="qc-info">
+    <label>Appointee's Name:</label>
+    <span>{{ prePrintQC.appointeeName }}</span>
+  </div>
+  <div class="qc-info">
+    <label>Date of Birth:</label>
+    <span>{{ prePrintQC.dateOfBirth | date }}</span>
+  </div>
+  <div class="qc-info">
+    <label>Relation:</label>
+    <span>{{ prePrintQC.relation }}</span>
+  </div>
+  <div class="qc-info">
+    <label>Gender:</label>
+    <span>{{ prePrintQC.gender }}</span>
+  </div>
+</div>
+
+<!-- Include Reprint Option Component -->
+<app-reprint-option></app-reprint-option>

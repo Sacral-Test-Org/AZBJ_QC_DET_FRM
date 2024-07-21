@@ -1,0 +1,42 @@
+<div class="nominee-management">
+  <form>
+    <div class="form-group">
+      <label for="misUser">MIS User</label>
+      <input type="text" id="misUser" name="misUser" maxlength="50" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="scanDate">Scan Date</label>
+      <input type="date" id="scanDate" name="scanDate" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="flag">Flag</label>
+      <input type="number" id="flag" name="flag" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="insertDate">Insert Date</label>
+      <input type="date" id="insertDate" name="insertDate" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="flag1">Flag1</label>
+      <input type="text" id="flag1" name="flag1" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <input type="text" id="description" name="description" maxlength="200" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+      <label for="opusValue">OPUS Value</label>
+      <input type="text" id="opusValue" name="opusValue" maxlength="5000" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+      <label>CI Nominee</label>
+      <div>
+        <input type="radio" id="ciNomineeN" name="ciNominee" value="N" checked />
+        <label for="ciNomineeN">N</label>
+        <input type="radio" id="ciNomineeY" name="ciNominee" value="Y" />
+        <label for="ciNomineeY">Y</label>
+      </div>
+    </div>
+  </form>
+  <app-qc-nominee-selection></app-qc-nominee-selection>
+</div>

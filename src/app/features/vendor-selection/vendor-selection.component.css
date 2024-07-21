@@ -1,0 +1,36 @@
+.vendor-field {
+  cursor: pointer;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 4px;
+  transition: border-color 0.3s;
+}
+
+.vendor-field:hover {
+  border-color: #888;
+}
+
+.vendor-list {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  max-height: 200px;
+  overflow-y: auto;
+  width: 100%;
+  z-index: 1000;
+}
+
+.vendor-list-item {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.vendor-list-item:hover {
+  background-color: #f0f0f0;
+}
+
+.vendor-list-item.selected {
+  background-color: #d0d0d0;
+}

@@ -1,0 +1,88 @@
+/* QC Correction Component Styles */
+
+/* Container for the QC Correction window */
+.qc-correction-container {
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Title of the QC Correction window */
+.qc-correction-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Styles for the form fields */
+.qc-correction-form .form-field {
+  margin-bottom: 15px;
+}
+
+.qc-correction-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.qc-correction-form input[type="text"],
+.qc-correction-form input[type="number"],
+.qc-correction-form input[type="date"],
+.qc-correction-form .radio-group {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.qc-correction-form input[readonly] {
+  background-color: #e9ecef;
+}
+
+.qc-correction-form .radio-group {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.qc-correction-form .radio-group label {
+  margin-right: 10px;
+}
+
+/* Hidden field */
+.qc-correction-form input[type="hidden"] {
+  display: none;
+}
+
+/* Highlight the current record */
+.qc-correction-record.current {
+  background-color: #e0f7fa;
+}
+
+/* Style for the navigation feedback */
+.qc-correction-record {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.qc-correction-record:last-child {
+  border-bottom: none;
+}
+
+/* Scrollbar styling */
+.qc-correction-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.qc-correction-container::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+.qc-correction-container::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}

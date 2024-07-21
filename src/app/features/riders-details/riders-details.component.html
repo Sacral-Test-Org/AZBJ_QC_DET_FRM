@@ -1,0 +1,45 @@
+<div class="rider-details">
+  <h2>Insurance Rider Details</h2>
+  <div class="rider-detail" *ngFor="let rider of riders">
+    <div class="detail-item">
+      <label>Cover Code:</label>
+      <span>{{ rider.coverCode }}</span>
+    </div>
+    <div class="detail-item">
+      <label>Sum Insured:</label>
+      <span>{{ rider.sumInsured }}</span>
+    </div>
+    <div class="detail-item">
+      <label>Benefit Term:</label>
+      <span>{{ rider.benefitTerm }}</span>
+    </div>
+    <div class="detail-item">
+      <label>Premium Term:</label>
+      <span>{{ rider.premiumTerm }}</span>
+    </div>
+  </div>
+</div>
+
+<style>
+.rider-details {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.rider-detail {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+label {
+  font-weight: bold;
+}
+</style>

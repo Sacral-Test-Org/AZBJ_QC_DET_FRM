@@ -1,0 +1,44 @@
+/* Styles for RidersDetailsComponent */
+
+.rider-details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.rider-detail {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.rider-detail-label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.rider-detail-value {
+  flex-grow: 1;
+  text-align: right;
+}
+
+/* Ensure read-only format */
+.rider-detail input {
+  border: none;
+  background: none;
+  text-align: right;
+  pointer-events: none;
+}
+
+/* Consistent alignment and formatting */
+.rider-detail:nth-child(even) {
+  background-color: #e9e9e9;
+}
